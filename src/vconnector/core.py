@@ -36,7 +36,7 @@ import logging
 import sqlite3
 
 import pyVmomi
-import pyVim.connect
+import pyvim.connect
 
 from vconnector.cache import CachedObject
 from vconnector.cache import CacheInventory
