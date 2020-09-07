@@ -151,7 +151,7 @@ class VConnector(object):
         logging.info('Connecting vSphere Agent to %s', self.host)
         
         try:
-            self._si = pyVim.connect.SmartConnect(
+            self._si = pyvim.connect.SmartConnect(
                 host=self.host,
                 user=self.user,
                 pwd=self.pwd,
@@ -173,7 +173,7 @@ class VConnector(object):
             return
 
         logging.info('Disconnecting vSphere Agent from %s', self.host)
-        pyVim.connect.Disconnect(self.si)
+        pyvim.connect.Disconnect(self.si)
 
     def reconnect(self):
         """
